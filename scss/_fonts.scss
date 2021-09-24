@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+$font-family: Poppins;
+
+$font-weights: (
+    "light": 400,
+    "normal": 500,
+    "medium": 600,
+    "bold": 700
+);
+$font-size: (
+    "regular": 18px, 
+    "title": 2.55rem,
+    "sub title": 2rem,
+    "button": 1.3rem
+);
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+@function size($size-name) {
+    @return map-get($font-size, $size-name);
+}

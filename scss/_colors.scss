@@ -1,0 +1,24 @@
+$primary-colors: (
+    "white": hsl(0, 0%, 90%),
+    "cyan":hsl(180, 66%, 49%),
+    "cyan hover":hsl(180, 66%, 60%),
+    "dark violet": hsl(257, 27%, 26%)
+);
+
+$secondary-color: hsl(0, 87%, 67%);
+
+$neutral-colors: (
+    "gray": hsl(0, 0%, 75%),
+    "grayish violet": hsl(257, 7%, 63%),
+    "very dark blue": hsl(255, 11%, 22%),
+    "very dark violet": hsl(260, 8%, 14%),
+    "light yellow": hsl(273, 22%, 84%)
+);
+
+@function prm-clr($color-name) {
+    @return map-get($primary-colors, $color-name);
+}
+
+@function ntr-clr($color-name) {
+    @return map-get($neutral-colors, $color-name);
+}
